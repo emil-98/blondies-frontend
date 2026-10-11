@@ -1,0 +1,196 @@
+:root {
+  --lightpink: #f8dbe6;
+  --darkpink: #dd267f;
+  --accent1: #f49cbd;
+  --accent2: #541630;
+  --accent3: #f2bc53;
+  --accent4: #f3ac5b;
+  --headlinered: #c60d5e; /* same color as subaru STI logo */
+
+  --titlescale: 1.2
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+  font-family: "Poppins";
+  background: var(--accent1);
+  color: var(--darkpink);
+  line-height: 1.6;
+  z-index: 0;
+  width: 100%;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+    text-decoration: none; 
+}
+
+nav-bar {
+    display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+  background: var(--accent1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  filter: drop-shadow(0px 0px 5px transparent);
+  transition: filter 200ms;
+}
+
+.logo img:hover {
+    filter: drop-shadow(0px 0px 5px var(--lightpink));
+}
+
+.hero-page {
+    width: 100%;
+    position: relative;
+    display: grid;
+    height: fit-content;
+    place-items: center;
+    min-height: calc(100vh - 115px);
+    
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  font-size: 1rem;
+  
+}
+
+nav a {
+    color: var(--darkpink);
+    font-size: 1.3rem;
+    transition: color 200ms;
+    font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--accent2);
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    font-size: 17rem;
+    position: relative;
+    color: var(--lightpink);
+    font-family: "Anton";
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -3px;
+    
+}
+
+.top-line {
+    transform: scaleY(var(--titlescale));
+    transform-origin: bottom;
+}
+
+.subtitle {
+    font-family: "Bodoni Moda";
+    font-style: italic;
+    font-weight: 1000;
+    font-size: 6rem;
+    position: relative;
+    letter-spacing: -2px;
+    color: var(--lightpink);
+    margin-top: -4rem;
+}
+
+#bigcookie {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 800px;
+}
+
+h1 {
+    font-family: 'Anton';
+    color: var(--lightpink);
+    font-size: 6rem;
+    font-weight: 200;
+    margin-bottom: -4rem;
+}
+
+h2 {
+    font-family: 'Bodoni Moda';
+    font-weight: 800;
+    font-size: 3rem;
+    margin: 3rem;
+}
+
+section {
+    scroll-margin-top: 6rem;
+}
+
+.itembox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    max-width: 500px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+    .itembox {
+        max-width: 300px;
+    }
+}
+
+.itembox img {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.itembox h3 {
+    font-weight: 200;
+    font-family: 'Anton';
+    color: var(--lightpink);
+    font-size: 2.5rem;
+}
+
+#menu {
+    margin: 2rem;
+    text-align: center;
+    
+}
+
+#menu .gridbox{
+    --gap: 1.5rem;
+    --cols: 4;
+    --min-col: max(
+        200px,
+        calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols))
+    );
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--min-col), 100%), 1fr));
+    gap: var(--gap);
+    justify-items: center;
+    max-width: 1400px;   /* optional: keeps the grid from stretching on huge screens */
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}

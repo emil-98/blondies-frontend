@@ -1,0 +1,3 @@
+class ContentBox extends HTMLElement {
+  
+}
