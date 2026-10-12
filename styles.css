@@ -175,7 +175,7 @@ section {
 #menu {
     margin: 2rem;
     text-align: center;
-    
+    min-height: calc(100vh - 115px);
 }
 
 #menu .gridbox{
