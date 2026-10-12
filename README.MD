@@ -1,4 +1,4 @@
-![Blondies logo](https://github.com/kwelton00/blondies-frontend/blob/main/blondies_logo.svg?raw=true)
+![Blondies logo](assets/blondies_logo.svg?raw=true)
 
 # Blondies Bakery: App frontend
 
