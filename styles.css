@@ -400,6 +400,7 @@ input, textarea, button {
     font-family: 'Poppins';
     caret-color: var(--darkpink);
     color: var(--darkpink);
+    font-size: 1.5rem;
 }
 
 input:focus, textarea:focus{
@@ -408,6 +409,7 @@ input:focus, textarea:focus{
 
 input, button {
     border-radius: 300px;
+    
 }
 
 button {
@@ -432,4 +434,6 @@ textarea {
 
 ::placeholder {
     color: var(--accent1);
+    font-size: 1.5rem;
+    font-weight: 600;
 }
