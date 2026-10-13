@@ -1,13 +1,13 @@
 :root {
-  --lightpink: #f8dbe6;
-  --darkpink: #dd267f;
-  --accent1: #f49cbd;
-  --accent2: #541630;
-  --accent3: #f2bc53;
-  --accent4: #f3ac5b;
-  --headlinered: #c60d5e; /* same color as subaru STI logo */
+    --lightpink: #f8dbe6;
+    --darkpink: #dd267f;
+    --accent1: #f49cbd;
+    --accent2: #541630;
+    --accent3: #f2bc53;
+    --accent4: #f3ac5b;
+    --headlinered: #c60d5e;
 
-  --titlescale: 1.2
+    --titlescale: 1.2
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -18,14 +18,13 @@ html{
 
 body {
     display: flex;
-  font-family: "Poppins";
-  background: var(--accent1);
-  color: var(--darkpink);
-  line-height: 1.6;
-  z-index: 0;
-  width: 100%;
-  flex-direction: column;
-  min-height: 100vh;
+    font-family: "Poppins";
+    background: var(--accent1);
+    color: var(--darkpink);
+    line-height: 1.6;
+    z-index: 0;
+    width: 100%;
+    flex-direction: column;
 }
 
 a {
@@ -34,43 +33,26 @@ a {
 
 nav-bar {
     display: flex;
-  flex-shrink: 0;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 1.5rem;
-  background: var(--accent1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.logo img {
-  height: 60px;
-  width: auto;
-  filter: drop-shadow(0px 0px 5px transparent);
-  transition: filter 200ms;
-}
-
-.logo img:hover {
-    filter: drop-shadow(0px 0px 5px var(--lightpink));
-}
-
-.hero-page {
-    width: 100%;
-    position: relative;
-    display: grid;
-    height: fit-content;
-    place-items: center;
-    min-height: calc(100vh - 115px);
-    
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    box-sizing: border-box;
 }
 
 nav ul {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  font-size: 1rem;
-  
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--accent1);
+    border-radius: 100px;
 }
 
 nav a {
@@ -81,7 +63,33 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--accent2);
+    color: var(--lightpink);
+}
+
+.logo img {
+    height: 4rem;
+    width: auto;
+    filter: drop-shadow(0px 0px 5px transparent);
+    transition: filter 200ms;
+}
+
+.logo img:hover {
+    filter: drop-shadow(0px 0px 5px var(--lightpink));
+}
+
+.hero-page {
+    width: 100%;
+    min-height: 100svh;
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: clip;
+}
+
+fit-headline {
+    display: block;
+    z-index: 10;
+    position: relative;
 }
 
 .headline {
@@ -89,30 +97,31 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     z-index: 10;
-    font-size: 17rem;
+    font-size: 1em;
     position: relative;
     color: var(--lightpink);
     font-family: "Anton";
     font-weight: 700;
     text-align: center;
-    letter-spacing: -3px;
-    
 }
 
 .top-line {
+    letter-spacing: -0.01em;
     transform: scaleY(var(--titlescale));
     transform-origin: bottom;
+    white-space: nowrap;
 }
 
 .subtitle {
     font-family: "Bodoni Moda";
     font-style: italic;
-    font-weight: 1000;
+    font-weight: 900;
     font-size: 6rem;
     position: relative;
-    letter-spacing: -2px;
+    letter-spacing: -0.02em;
     color: var(--lightpink);
-    margin-top: -4rem;
+    margin-top: -0.7em;
+    white-space: nowrap;
 }
 
 #bigcookie {
@@ -120,7 +129,12 @@ nav a:hover {
     z-index: 5;
     left: 50%;
     transform: translateX(-50%);
-    height: 800px;
+    height: calc(var(--sub-size, 11svh) * 8.5);
+    width: auto;
+    max-width: 85%;
+    object-fit: contain;
+    max-height: 100vh;
+    margin-bottom: 1rem;
 }
 
 h1 {
@@ -128,18 +142,25 @@ h1 {
     color: var(--lightpink);
     font-size: 6rem;
     font-weight: 200;
-    margin-bottom: -4rem;
+    text-align: center;
 }
 
 h2 {
     font-family: 'Bodoni Moda';
+    font-style: italic;
     font-weight: 800;
     font-size: 3rem;
-    margin: 3rem;
+    text-align: center;
 }
 
 section {
-    scroll-margin-top: 6rem;
+    min-height: 100svh;
+    display:grid;
+    align-content: center;
+    box-sizing: border-box;
+    scroll-margin-top: 0;
+    height: fit-content;
+    justify-items: center;
 }
 
 .itembox {
@@ -161,7 +182,11 @@ section {
 }
 
 .itembox img {
-    color: white;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    display: block;
+    border-radius: 12px;
     margin-bottom: 1rem;
 }
 
@@ -172,10 +197,10 @@ section {
     font-size: 2.5rem;
 }
 
-#menu {
-    margin: 2rem;
-    text-align: center;
-    min-height: calc(100vh - 115px);
+.itembox h4{
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
 #menu .gridbox{
@@ -189,8 +214,53 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(min(var(--min-col), 100%), 1fr));
     gap: var(--gap);
     justify-items: center;
-    max-width: 1400px;   /* optional: keeps the grid from stretching on huge screens */
+    max-width: 1400px; /* don't stretch the grid on huge screens */
     margin: 0 auto;
     padding: 0 1rem;
     box-sizing: border-box;
 }
+
+section .paragraph-holder {
+    width: fit-content;
+    align-items: center;
+}
+
+.paragraph-holder p {
+    margin: 0 10%;
+    max-width: 1000px;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 1.2em;
+}
+
+.bold{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.blondies-p-logo {
+    height: 1.6em;
+    vertical-align: -0.25em;
+
+}
+
+.bold:has(.blondies-p-logo) {
+    font-size: 1.2em;
+}
+
+.headline-lore{
+    font-family: 'Anton';
+    font-size: 1.7em;
+    letter-spacing: -0.01em;
+    margin-bottom: -1rem;
+}
+
+.subtitle-lore{
+    font-family: 'Bodoni Moda';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 1.2em;
+    letter-spacing: -0.02em;
+    padding-bottom: 3rem;
+}
+
