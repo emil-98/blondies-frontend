@@ -160,6 +160,11 @@ h1 {
     font-size: 6rem;
     font-weight: 200;
     text-align: center;
+    
+}
+
+h1:not(.headline){
+    line-height: 0.85;
 }
 
 h2 {
@@ -265,6 +270,7 @@ section .paragraph-holder {
     text-align: center;
     font-size: 1.3rem;
     line-height: 1.2em;
+    margin-top: 1.2em;
 }
 
 .bold{
