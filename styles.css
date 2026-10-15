@@ -164,7 +164,7 @@ h1 {
 }
 
 h1:not(.headline){
-    line-height: 0.85;
+    line-height: 0.9;
 }
 
 h2 {
@@ -260,7 +260,7 @@ section:not(#home) {
 /* ---------- Lore / paragraphs ---------- */
 
 section .paragraph-holder {
-    width: fit-content;
+    min-width: 400px;
     align-items: center;
 }
 
@@ -443,4 +443,20 @@ textarea {
     color: var(--accent1);
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+a {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--darkpink);
+    transition: color 200ms;
+}
+
+a:hover {
+    color:var(--lightpink);
+}
+
+.icon {
+    height: 1em;
+    vertical-align: -0.15em;
 }
