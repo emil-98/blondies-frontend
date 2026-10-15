@@ -16,10 +16,10 @@ class Navbar extends HTMLElement {
       </button>
       <nav id="nav-links">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#order">Order</a></li>
-          <li><a href="#lore">Lore</a></li>
+          <li><a href="/#home">Home</a></li>
+          <li><a href="/#menu">Menu</a></li>
+          <li><a href="/#order">Order</a></li>
+          <li><a href="/lore.html">Lore</a></li>
         </ul>
       </nav>`;
 
