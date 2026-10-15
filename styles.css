@@ -445,19 +445,15 @@ textarea {
     font-weight: 600;
 }
 
-a:not(.inline-link) {
+a {
     font-size: 1.5em;
     font-weight: 600;
     color: var(--darkpink);
     transition: color 200ms;
+    white-space: nowrap;
 }
 
-.inline-link {
-    color: var(--darkpink);
-    transition: color 200ms;
-}
-
-a:hover, .inline-link:hover {
+a:hover {
     color:var(--lightpink);
 }
 
